@@ -34,8 +34,7 @@ pipeline {
         stage('Containersation'){
             steps{
                 sh '''
-                    docker run -it -d --name c1 -p 9002:8080  manojkrishnappa/project
-                '''
+                    docker run -it -d --name c1 -p 9002:8080 shekharmethre/project                '''
             }
         }
 
@@ -50,7 +49,7 @@ pipeline {
         }
         stage('Pushing image to repository'){
             steps{
-                sh 'docker push manojkrishnappa/project'
+                sh 'docker push shekharmethre/project'
             }
         }
     }
